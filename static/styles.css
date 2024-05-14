@@ -3,12 +3,21 @@
     color: black;
     font-family: 'Times New Roman', Times, serif;
 
-    width: max(600px, 40%);
+    width: min(600px, 95%);
     margin: 0 auto;
 }
 
 a {
     color: #006aa7;
+}
+
+ul {
+    overflow: hidden;
+    text-wrap: wrap;
+}
+
+blockquote {
+    margin-right: 0;
 }
 
 @media screen {
@@ -46,6 +55,10 @@ a {
     section {
         padding: 1rem 0;
         border-bottom: 1px solid #ffffff40;
+    }
+
+    section:last-of-type {
+        border-bottom: none;
     }
 }
 

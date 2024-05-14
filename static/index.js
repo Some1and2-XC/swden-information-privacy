@@ -32,4 +32,26 @@ function add_tags() {
     }
 }
 
+function add_acronyms() {
+    var acronyms = {
+        "IMR": "Infant Mortality Rate",
+        "EU": "European Union",
+        "GDPR": "General Data Protection Regulation",
+        "IMY": "Swedish Authority for Privacy Protection",
+        "Riksdag": "The Swedish Parliament",
+    };
+
+    var paragraphs = document.getElementsByTagName("p");
+
+    for (let i = 0; i < paragraphs.length; i++) {
+        for (k in acronyms) {
+            var inner = paragraphs[i].innerHTML;
+            paragraphs[i].innerHTML = inner.replaceAll(k, `
+                <acronym title="${acronyms[k]}">${k}</acronym>
+            `);
+        }
+    }
+}
+
 add_tags();
+add_acronyms();
