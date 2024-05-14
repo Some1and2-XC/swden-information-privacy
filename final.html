@@ -131,6 +131,28 @@
             <h1>Governing Practices</h1>
         </section>
 
+        <section>
+            <h1>Citations</h1>
+            <ul id="citation-list">
+                <li>https://www.cipd.org/en/knowledge/factsheets/ethics-role-hr-factsheet/</li>
+                <li>https://bmchealthservres.biomedcentral.com/articles/10.1186/s12913-018-3436-8</li>
+                <li>https://www.riksdagen.se/globalassets/03.-dokument-och-lagar/bestall-och-ladda-ner/other-languages/grundlagar-2023-engelsk-web.pdf</li>
+                <li>https://sweden.se/culture/history/history-of-sweden</li>
+                <li>https://www.pewresearch.org/journalism/fact-sheet/news-media-and-political-attitudes-in-sweden</li>
+            </ul>
+
+            <script>
+                // Makes every link in the citation-list into an 'a' tag
+                var citations = document.getElementById("citation-list");
+                for (let i = 0; i < citations.children.length; i++) {
+                    var url = citations.children[i].innerHTML;
+                    citations.children[i].innerHTML = `
+                        <a href="${url}" target="_blank">${url}</a>
+                    `;
+                }
+            </script>
+        </section>
+
         <script src="./static/index.js"></script>
     </body>
 </html>
